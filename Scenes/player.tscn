@@ -360,8 +360,8 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_q7av3"]
-radius = 9.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_2xsxq"]
+radius = 1.41421
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 5
@@ -373,6 +373,10 @@ animation = &"Idle"
 autoplay = "Idle"
 frame_progress = 0.402835
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(0, -2)
-shape = SubResource("CircleShape2D_q7av3")
+polygon = PackedVector2Array(7, -3, -1, -11, -8, -2, -3.23591, 2.16858, -2, 18, 2, 18, 2.4311, 2.2216)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_2xsxq")
