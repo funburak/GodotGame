@@ -25,7 +25,7 @@ public partial class player : CharacterBody2D
 		if (!IsOnFloor())
 		{
 			velocity.Y += gravity * (float)delta;
-			if (Input.IsActionPressed("jump") && velocity.Y > 0 && jumpCount < 2) // Double Jump
+			if (Input.IsActionJustPressed("jump") && velocity.Y > 0 && jumpCount < 2) // Double Jump
             {
 				velocity.Y = JumpVelocity;
 				jumpCount++;
