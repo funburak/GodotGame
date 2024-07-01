@@ -1,0 +1,222 @@
+[gd_scene load_steps=14 format=3 uid="uid://c8joksac0relc"]
+
+[ext_resource type="PackedScene" uid="uid://7jp1g8kp1t11" path="res://Scenes/player.tscn" id="1_cjgnd"]
+[ext_resource type="Script" path="res://Scripts/game_manager.cs" id="1_m6wa6"]
+[ext_resource type="Texture2D" uid="uid://y4qqb57kq0cc" path="res://Assets/Sprites/TileMap/TileSet1.png" id="2_ai6wb"]
+[ext_resource type="PackedScene" uid="uid://utiwgiipcp0x" path="res://Scenes/platform.tscn" id="3_nmwrc"]
+[ext_resource type="PackedScene" uid="uid://kcjnwmbh87un" path="res://Scenes/coin.tscn" id="4_nofvs"]
+[ext_resource type="PackedScene" uid="uid://lwnjcp3xxj5f" path="res://Scenes/killzone.tscn" id="5_bc82g"]
+[ext_resource type="PackedScene" uid="uid://c6luw6quyc3fg" path="res://Scenes/enemy.tscn" id="6_sjw6p"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_btv7y"]
+texture = ExtResource("2_ai6wb")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+4:1/0 = 0
+4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:1/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+3:2/0 = 0
+3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:2/0/physics_layer_0/angular_velocity = 0.0
+4:2/0 = 0
+4:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:2/0/physics_layer_0/angular_velocity = 0.0
+0:3/0 = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+1:3/0 = 0
+1:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:3/0/physics_layer_0/angular_velocity = 0.0
+2:3/0 = 0
+2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:3/0/physics_layer_0/angular_velocity = 0.0
+3:3/0 = 0
+3:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:3/0/physics_layer_0/angular_velocity = 0.0
+4:3/0 = 0
+4:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:3/0/physics_layer_0/angular_velocity = 0.0
+0:4/0 = 0
+0:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:4/0/physics_layer_0/angular_velocity = 0.0
+1:4/0 = 0
+1:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:4/0/physics_layer_0/angular_velocity = 0.0
+2:4/0 = 0
+2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:4/0/physics_layer_0/angular_velocity = 0.0
+3:4/0 = 0
+3:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:4/0/physics_layer_0/angular_velocity = 0.0
+4:4/0 = 0
+4:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:4/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_lksik"]
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_btv7y")
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vvayx"]
+
+[sub_resource type="Animation" id="Animation_xm26h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, -65)]
+}
+
+[sub_resource type="Animation" id="Animation_eofqw"]
+resource_name = "move"
+length = 1.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2, -65), Vector2(134, -65)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gdwjn"]
+_data = {
+"RESET": SubResource("Animation_xm26h"),
+"move": SubResource("Animation_eofqw")
+}
+
+[node name="Game" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_m6wa6")
+
+[node name="ScoreLabel" type="Label" parent="GameManager"]
+offset_left = 521.0
+offset_top = -106.0
+offset_right = 729.0
+offset_bottom = -72.0
+text = "You have collected X coins!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(1, 1)
+tile_set = SubResource("TileSet_lksik")
+format = 2
+layer_0/name = "Background"
+layer_0/tile_data = PackedInt32Array(196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196613, 1, 0, 196614, 1, 0, 196615, 1, 0, 196616, 1, 0, 196617, 1, 0, 196618, 1, 0, 196619, 1, 0, 196637, 1, 0, 262173, 1, 0, 262174, 1, 0, 262175, 1, 0, 262176, 1, 0, 262177, 1, 0, 196641, 1, 0, 22, 1, 0, -65514, 1, 0, -65513, 1, 0, -65512, 1, 0, -65511, 1, 0, -131047, 1, 0, -131046, 1, 0, -131045, 1, 0, -131048, 1, 0, -131049, 1, 0, -65510, 1, 0, -65509, 1, 0, -131037, 1, 0, -131036, 1, 0, -131035, 1, 0, -131034, 1, 0, -131033, 1, 0, -131032, 1, 0, 196620, 1, 0)
+layer_1/name = "Mid"
+layer_1/tile_data = PackedInt32Array(196609, 0, 0, 196610, 65536, 0, 196611, 131072, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 131077, 196608, 0, 131078, 196608, 0, 131079, 196608, 0, 131080, 196608, 0, 131081, 262144, 0, 131082, 196608, 0, 131083, 196608, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 131084, 196608, 0, 131085, 196608, 0, 29, 0, 0, -65507, 0, 0, -65508, 0, 0, -131044, 0, 0, -131045, 0, 0, -131046, 0, 0, 28, 0, 0, -65509, 0, 0, -131047, 0, 0, -131048, 0, 0, -262118, 196608, 1, -327654, 131072, 1, -196582, 0, 1, 36, 0, 0, -65500, 0, 0, -131036, 0, 0, -131035, 0, 0, -131034, 0, 0, -131033, 0, 0, -131032, 0, 0, -196568, 0, 0, -65499, 0, 0, -65498, 0, 0, -65497, 0, 0, -65496, 0, 0, 196643, 0, 0, 262173, 0, 0, 196637, 0, 0, 262174, 0, 0, 262175, 0, 0, 262176, 0, 0, 262177, 0, 0, 262178, 0, 0, 262179, 0, 0)
+
+[node name="Player" parent="." instance=ExtResource("1_cjgnd")]
+position = Vector2(55, 33)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(2, 0)
+zoom = Vector2(4, 4)
+limit_bottom = 150
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="Killzone" parent="." instance=ExtResource("5_bc82g")]
+position = Vector2(202, 134)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+shape = SubResource("WorldBoundaryShape2D_vvayx")
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource("4_nofvs")]
+position = Vector2(98, 38)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("4_nofvs")]
+position = Vector2(178, 41)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("4_nofvs")]
+position = Vector2(127, -30)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("4_nofvs")]
+position = Vector2(630, -38)
+
+[node name="Coin5" parent="Coins" instance=ExtResource("4_nofvs")]
+position = Vector2(409, -39)
+
+[node name="Platforms" type="Node" parent="."]
+
+[node name="Platform" parent="Platforms" instance=ExtResource("3_nmwrc")]
+position = Vector2(-166, -133)
+
+[node name="Platform2" parent="Platforms" instance=ExtResource("3_nmwrc")]
+position = Vector2(2, -65)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform2"]
+libraries = {
+"": SubResource("AnimationLibrary_gdwjn")
+}
+autoplay = "move"
+
+[node name="Enemy" parent="." instance=ExtResource("6_sjw6p")]
+position = Vector2(473, 39)
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Labels"]
+offset_left = -104.0
+offset_top = 8.0
+offset_right = 10.0
+offset_bottom = 42.0
+text = "Space to jump."
+
+[node name="Label2" type="Label" parent="Labels"]
+offset_left = 317.0
+offset_top = 82.0
+offset_right = 431.0
+offset_bottom = 116.0
+text = "Dont fall off!"

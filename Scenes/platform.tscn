@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://utiwgiipcp0x"]
+
+[ext_resource type="Texture2D" uid="uid://c3wi1foj0qnnl" path="res://Assets/Sprites/TileMap/DirtTile1.png" id="1_soqj1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7e6u"]
+size = Vector2(17.5281, 10)
+
+[node name="Platform" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(291.5, 119.5)
+scale = Vector2(1.875, 0.325)
+texture = ExtResource("1_soqj1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(293, 120)
+scale = Vector2(4.45, 1)
+shape = SubResource("RectangleShape2D_x7e6u")
+one_way_collision = true
